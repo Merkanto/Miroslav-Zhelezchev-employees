@@ -1,0 +1,71 @@
+# === Java ===
+/target/
+/out/
+/bin/
+/*.log
+
+# === Maven ===
+.mvn/
+!.mvn/wrapper/maven-wrapper.jar
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+dependency-reduced-pom.xml
+
+# === IntelliJ IDEA ===
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# === STS/Eclipse ===
+.classpath
+.project
+.settings/
+.springBeans
+.sts4-cache/
+
+# === VS Code ===
+.vscode/
+
+# === OS-specific ===
+.DS_Store
+Thumbs.db
+
+# === Spring Boot Logs and Temp Files ===
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# === Angular ===
+/employee-collab-ui/node_modules/
+/employee-collab-ui/dist/
+/employee-collab-ui/.angular/cache/
+/employee-collab-ui/.angular/config.json
+/employee-collab-ui/.angular/tmp/
+
+# === Angular Build Artifacts ===
+/employee-collab-ui/.output/
+/employee-collab-ui/.ng_build/
+
+# === Env/config ===
+.env
+.env.local
+.env.production
+.env.development
+*.local
+
+# === npm / Yarn Logs ===
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# === Optional ===
+*.orig
+*.rej
+
+# === Test coverage ===
+/coverage/

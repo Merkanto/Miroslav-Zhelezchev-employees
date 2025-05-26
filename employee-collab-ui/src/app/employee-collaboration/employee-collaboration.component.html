@@ -1,0 +1,36 @@
+<mat-card>
+  <h2>Upload CSV to Find Longest Working Employee Pairs</h2>
+
+  <input type="file" (change)="onFileSelected($event)" accept=".csv" />
+  <button mat-raised-button color="primary" (click)="onUpload()" [disabled]="!selectedFile">Upload</button>
+
+  <mat-error *ngIf="errorMessage">{{ errorMessage }}</mat-error>
+</mat-card>
+
+<mat-card *ngIf="collaborations.length > 0" style="margin-top: 20px;">
+  <table mat-table [dataSource]="collaborations" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="employee1Id">
+      <th mat-header-cell *matHeaderCellDef> Employee 1 </th>
+      <td mat-cell *matCellDef="let c"> {{c.employee1Id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="employee2Id">
+      <th mat-header-cell *matHeaderCellDef> Employee 2 </th>
+      <td mat-cell *matCellDef="let c"> {{c.employee2Id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="projectId">
+      <th mat-header-cell *matHeaderCellDef> Project ID </th>
+      <td mat-cell *matCellDef="let c"> {{c.projectId}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="daysWorkedTogether">
+      <th mat-header-cell *matHeaderCellDef> Days Worked </th>
+      <td mat-cell *matCellDef="let c"> {{c.daysWorkedTogether}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</mat-card>
